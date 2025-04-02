@@ -37,7 +37,9 @@ Execute locally using java , access the application http://localhost:8080
 java -jar target/spring-boot-web.jar
 ```
 
-<img width="1728" alt="Screenshot 2025-04-02 at 15 43 11" src="https://github.com/user-attachments/assets/81ddcc18-9951-4b05-b3ba-2744eedf6075" />
+<img width="1728" alt="Screenshot 2025-04-02 at 15 47 02" src="https://github.com/user-attachments/assets/e4fd2c47-2c7d-46cf-ae6f-c18cca59d2ac" />
+
+Hurray! We are able to access the application.
 
 Step 1: Creating EC2 instance
 Since we are installing jenkins , docker and sonarqube it should be large instance.The specification is as below:
