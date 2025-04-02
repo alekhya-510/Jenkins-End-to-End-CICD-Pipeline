@@ -20,22 +20,23 @@ Finally we deployed the java springboot application in EKS cluster.
 Before deploying to EKS cluster , we can check locally that how the application is working.
 Clone the git repo and move to the directory :
 
-'''
+```
 git clone https://github.com/alekhya-510/Jenkins-End-to-End-CICD-Pipeline.git
 cd java-maven-sonar-argocd-helm-k8s/sprint-boot-app
-'''
+```
 
 The application is build using maven tool, install maven locally and once done,build using following command:
 
-'''
+```
 mvn clean package
-'''
+```
 
 Execute locally using java , access the application http://localhost:8080
 
-'''
+```
 java -jar target/spring-boot-web.jar
-'''
+```
+
 <img width="1728" alt="Screenshot 2025-04-02 at 15 43 11" src="https://github.com/user-attachments/assets/81ddcc18-9951-4b05-b3ba-2744eedf6075" />
 
 Step 1: Creating EC2 instance
