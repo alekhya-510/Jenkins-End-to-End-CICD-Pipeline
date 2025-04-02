@@ -90,7 +90,53 @@ sudo apt-get install jenkins
 
 Jenkins Login Page:
 
+To access the jenkins we need to open the port for 8080
+
+http:<public-ip>:8080
+
 <img width="1725" alt="Screenshot 2025-04-02 at 16 44 27" src="https://github.com/user-attachments/assets/b80056f1-23fc-41e9-9ada-f4006e9960b4" />
+
+**Step3 : Configuring Docker and Sonarsever on EC2 server**
+We need to configure Docker and Sonarserver on Ec2 instance,login to ec2 server then do the following configuration:
+
+Docker Configuration:
+```
+sudo apt update
+sudo apt install docker.io
+```
+Granting jenkins and ubuntu user to access docker daemon :
+```
+sudo su - 
+usermod -aG docker jenkins
+usermod -aG docker ubuntu
+systemctl restart docker
+```
+
+Configuring sonarqube server:
+
+```
+sudo apt update && sudo apt install unzip -y
+sudo adduser sonarqube
+wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-10.4.1.88267.zip
+sudo su -
+sudo su - sonarqube
+unzip *
+chown -R sonarqube:sonarqube /home/sonarqube/sonarqube-10.4.1.88267
+chmod -R 755 /home/sonarqube/sonarqube-10.4.1.88267
+cd sonarqube-10.4.1.88267/bin/linux-x86-64
+./sonar.sh start
+
+sonarserver can be accessed through http://<public-ip>:9000
+
+<img width="1724" alt="Screenshot 2025-04-02 at 18 47 05" src="https://github.com/user-attachments/assets/4d6fdbda-e799-4948-95db-262c1c713297" />
+
+
+We are integrating sonarqube and docker in the pipeline,hence in the jenkins we need to update these plugins such as 
+dockerpipeline
+sonarqubescanner
+
+
+
 
 
 
