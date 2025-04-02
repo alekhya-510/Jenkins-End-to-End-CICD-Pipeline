@@ -37,16 +37,29 @@ Execute locally using java , access the application http://localhost:8080
 java -jar target/spring-boot-web.jar
 ```
 
+Using Docker , application can be accessed as below:
+
+```
+docker build -t jenkins-cicd:v1 .
+```
+```
+docker run -d -p 8010:8080 -t jenkins-cicd:v1
+```
+
+
 <img width="1728" alt="Screenshot 2025-04-02 at 15 47 02" src="https://github.com/user-attachments/assets/e4fd2c47-2c7d-46cf-ae6f-c18cca59d2ac" />
 
-Hurray! We are able to access the application.
+Hurray!! We are able to access the application.
 
-Step 1: Creating EC2 instance
+
+**Step 1: Creating EC2 instance**
+
 Since we are installing jenkins , docker and sonarqube it should be large instance.The specification is as below:
-Instance type : t2.large
-O.S : Ubuntu
-Storage : 25Gb
-Security group: we need to open ports for SSH,HTTP & HTTPS
+**Instance type** : t2.large
+**O.S** : Ubuntu
+**Storage**: 25Gb
+**Security group**: we need to open ports for SSH,HTTP & HTTPS
 
+<img width="1457" alt="Screenshot 2025-04-02 at 15 51 20" src="https://github.com/user-attachments/assets/bc768207-a078-4682-bdbe-b211734c1e44" />
 
 
