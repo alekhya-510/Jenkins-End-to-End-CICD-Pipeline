@@ -66,6 +66,8 @@ Since we are installing jenkins , docker and sonarqube it should be large instan
 
 ssh to the instance and install the jenkins as below:
 
+ssh -i <pvt.key> user@<public-ip>
+
 Install java:
 
 ```
@@ -85,5 +87,10 @@ sudo apt-get update
 sudo apt-get install jenkins
 
 ```
+
+Jenkins Login Page:
+
+<img width="1725" alt="Screenshot 2025-04-02 at 16 44 27" src="https://github.com/user-attachments/assets/b80056f1-23fc-41e9-9ada-f4006e9960b4" />
+
 
 
