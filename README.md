@@ -55,11 +55,35 @@ Hurray!! We are able to access the application.
 **Step 1: Creating EC2 instance**
 
 Since we are installing jenkins , docker and sonarqube it should be large instance.The specification is as below:
-**Instance type** : t2.large \n
-**O.S** : Ubuntu \n
+**Instance type** : t2.large 
+**O.S** : Ubuntu 
 **Storage**: 25Gb 
 **Security group**: we need to open ports for SSH,HTTP & HTTPS
 
 <img width="1457" alt="Screenshot 2025-04-02 at 15 51 20" src="https://github.com/user-attachments/assets/bc768207-a078-4682-bdbe-b211734c1e44" />
+
+**Step 2: Installing Jenkins**
+
+ssh to the instance and install the jenkins as below:
+
+Install java:
+
+```
+sudo apt update
+sudo apt install openjdk-17-jre
+```
+
+Install Jenkins:
+
+```
+sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins
+
+```
 
 
