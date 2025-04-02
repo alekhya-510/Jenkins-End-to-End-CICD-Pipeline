@@ -132,8 +132,10 @@ sonarserver can be accessed through http://<public-ip>:9000
 
 
 We are integrating sonarqube and docker in the pipeline,hence in the jenkins we need to update these plugins such as 
-dockerpipeline
-sonarqubescanner
+a. dockerpipeline
+b. sonarqubescanner
+
+To integrate docker and sonarqube servers in jenkins we need to configure the credentials.
 
 
 
