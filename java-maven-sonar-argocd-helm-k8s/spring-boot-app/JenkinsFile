@@ -9,7 +9,7 @@ pipeline {
     stage('Checkout') {
       steps {
         sh 'echo passed'
-        //git branch: 'main', url: 'https://github.com/alekhya-510/Jenkins-Zero-To-Hero.git'
+        //git branch: 'main', url: 'https://github.com/alekhya-510/Jenkins-End-to-End-CICD-Pipeline.git'
       }
     }
     stage('Build and Test') {
@@ -36,19 +36,7 @@ pipeline {
      // }
    // }
 
-  stage('Debug Credentials') {
-    steps {
-        script {
-            // List available credentials (be careful with this in production)
-            echo "Checking credentials..."
-            withCredentials([usernamePassword(credentialsId: 'docker', 
-                            usernameVariable: 'USER', 
-                            passwordVariable: 'PASS')]) {
-                echo "Credentials found for user: ${USER}"
-            }
-        }
-    }
-}
+
   stage('Build and Push Docker Image') {
       environment {
         DOCKER_IMAGE = "alekhya510/jenkins-cicd:${BUILD_NUMBER}"
@@ -66,7 +54,7 @@ pipeline {
     }
     stage('Update Deployment File') {
         environment {
-            GIT_REPO_NAME = "Jenkins-Zero-To-Hero"
+            GIT_REPO_NAME = "Jenkins-End-to-End-CICD-Pipeline"
             GIT_USER_NAME = "alekhya-510"
         }
         steps {
