@@ -18,6 +18,7 @@ Finally we deployed the java springboot application in EKS cluster.
 
 **Deploying the application locally and accessing through your browser:**
 Before deploying to EKS cluster , we can check locally that how the application is working.
+
 Clone the git repo and move to the directory :
 
 ```
@@ -136,8 +137,6 @@ a. dockerpipeline
 b. sonarqubescanner
 
 To integrate docker,git and sonarqube servers in jenkins we need to configure the credentials as below:
-
-
-<img width="1728" alt="Screenshot 2025-04-04 at 09 32 53" src="https://github.com/user-attachments/assets/c414bb7f-708d-4401-8b5e-4391c8f3ec9b" />
+<img width="1727" alt="Screenshot 2025-04-04 at 09 43 05" src="https://github.com/user-attachments/assets/39515d86-7c6e-44b5-8b03-f5ba64ba1360" />
 
 
