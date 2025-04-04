@@ -126,7 +126,7 @@ chmod -R 755 /home/sonarqube/sonarqube-10.4.1.88267
 cd sonarqube-10.4.1.88267/bin/linux-x86-64
 ./sonar.sh start
 ```
-sonarserver can be accessed through http:<public-ip>:9000
+sonarserver can be accessed through http://<public-ip>:9000
 
 <img width="1724" alt="Screenshot 2025-04-02 at 18 47 05" src="https://github.com/user-attachments/assets/4d6fdbda-e799-4948-95db-262c1c713297" />
 
