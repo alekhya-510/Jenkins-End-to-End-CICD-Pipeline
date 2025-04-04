@@ -135,10 +135,10 @@ We are integrating sonarqube and docker in the pipeline,hence in the jenkins we 
 a. dockerpipeline
 b. sonarqubescanner
 
-To integrate docker and sonarqube servers in jenkins we need to configure the credentials.
+To integrate docker,git and sonarqube servers in jenkins we need to configure the credentials as below:
 
 
-
+<img width="1728" alt="Screenshot 2025-04-02 at 15 47 02" src="https://github.com/user-attachments/assets/20ddcc30-7138-48f4-aeda-d6611d4a30c3" />
 
 
 
