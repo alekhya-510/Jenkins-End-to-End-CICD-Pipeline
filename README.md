@@ -116,6 +116,11 @@ systemctl restart docker
 Configuring sonarqube server:
 
 ```
+docker run -d  --name sonar -p 9000:9000 sonarqube:lts-community
+```
+
+
+```
 sudo apt update && sudo apt install unzip -y
 sudo adduser sonarqube
 wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-10.4.1.88267.zip
