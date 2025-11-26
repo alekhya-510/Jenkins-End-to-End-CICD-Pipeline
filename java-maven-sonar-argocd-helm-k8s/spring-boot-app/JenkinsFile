@@ -23,7 +23,7 @@ pipeline {
 }
  stage('Static Code Analysis') {
    environment {
-       SCANNER_HOME=tool 'sonar-scanner'
+       SONAR_URL = "http:52.90.95.158:9000"
         }
      steps {
         withCredentials([string(credentialsId: 'sonarqube', variable: 'SONAR_AUTH_TOKEN')]) {
